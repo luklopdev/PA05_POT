@@ -52,12 +52,12 @@ for (int i = 0; i < t; i++)
         throw new ArgumentOutOfRangeException();
 
     var lastDigitsArray = lastDigitsDictionary[GetLastDigitsOfBasic(a)];
-    Console.WriteLine(GetLastDigitOfPower(a, b, lastDigitsArray));
+    Console.WriteLine(GetLastDigitOfPower(b, lastDigitsArray));
 }
 
 ushort GetLastDigitsOfBasic(uint a) => Convert.ToUInt16(a % 10);
 
-ushort GetLastDigitOfPower(uint a, uint b, ushort[] lastDigitsArray)
+ushort GetLastDigitOfPower(uint b, ushort[] lastDigitsArray)
 {
     var pow = lastDigitsArray.Length;
 
